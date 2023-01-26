@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20230126 19:11:28.633" rpa="true" schemaversion="3">
+<suite id="s1" name="Tasks" source="/Users/jan/Desktop/RPA/Robocorp/certificationLevel2-Lemon-Robot/tasks.robot">
+<test id="s1-t1" name="Order robots from RobotSpareBin Industries Inc" line="11">
+<kw name="Open Browser">
+<kw name="Log" library="BuiltIn">
+<arg>Openning available browser</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:11:29.900" endtime="20230126 19:11:29.902"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>https://robotsparebinindustries.com/#/robot-order</arg>
+<arg>maximized=True</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20230126 19:11:29.906" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230126 19:11:29.931" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20230126 19:11:30.463" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230126 19:11:32.896" level="INFO">Created Chrome browser with arguments: --start-maximized --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20230126 19:11:32.897" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20230126 19:11:32.898" level="INFO">Opening url 'https://robotsparebinindustries.com/#/robot-order'</msg>
+<status status="PASS" starttime="20230126 19:11:29.903" endtime="20230126 19:11:33.669"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check, if browser was opened properly</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:11:33.671" endtime="20230126 19:11:33.673"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>css:button.btn.btn-dark</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230126 19:11:33.674" endtime="20230126 19:11:33.708"/>
+</kw>
+<status status="PASS" starttime="20230126 19:11:29.897" endtime="20230126 19:11:33.709"/>
+</kw>
+<status status="PASS" starttime="20230126 19:11:29.892" endtime="20230126 19:11:33.711"/>
+</test>
+<doc>Orders robots from RobotSpareBin Industries Inc.
+Saves the order HTML receipt as a PDF file.
+Saves the screenshot of the ordered robot.
+Embeds the screenshot of the robot to the PDF receipt.
+Creates ZIP archive of the receipts and the images.</doc>
+<status status="PASS" starttime="20230126 19:11:28.646" endtime="20230126 19:11:33.715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

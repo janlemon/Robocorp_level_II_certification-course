@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on darwin)" generated="20230126 19:11:57.413" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="/Users/jan/.vscode/extensions/robocorp.robotframework-lsp-1.8.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open Browser">
+<msg timestamp="20230126 19:11:58.386" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20230126 19:11:58.386" endtime="20230126 19:11:58.386"/>
+</kw>
+<kw name="Pop Up window Handling">
+<msg timestamp="20230126 19:12:10.357" level="FAIL">No keyword with name 'Pop Up window Handling' found.</msg>
+<status status="FAIL" starttime="20230126 19:12:10.357" endtime="20230126 19:12:10.357"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Pop Up window Handling</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Pop Up window Handling">
+<msg timestamp="20230126 19:13:30.010" level="FAIL">No keyword with name 'Pop Up window Handling' found.</msg>
+<status status="FAIL" starttime="20230126 19:13:30.010" endtime="20230126 19:13:30.010"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:13:30.008" endtime="20230126 19:13:30.010"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:14:36.001" endtime="20230126 19:14:36.001"/>
+</kw>
+<kw name="Click Button">
+<arg>button:ok</arg>
+<msg timestamp="20230126 19:14:36.005" level="FAIL">No keyword with name 'Click Button' found.</msg>
+<status status="FAIL" starttime="20230126 19:14:36.005" endtime="20230126 19:14:36.005"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:14:36.000" endtime="20230126 19:14:36.006"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:14:36.000" endtime="20230126 19:14:36.006"/>
+</kw>
+<kw name="Import Library" library="BuiltIn">
+<arg>RPA.Browser.Selenium</arg>
+<doc>Imports a library with the given name and optional arguments.</doc>
+<status status="PASS" starttime="20230126 19:16:05.783" endtime="20230126 19:16:06.444"/>
+</kw>
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<msg timestamp="20230126 19:16:36.098" level="FAIL">Keyword 'OperatingSystem.Run' expected 1 argument, got 0.</msg>
+<status status="FAIL" starttime="20230126 19:16:36.097" endtime="20230126 19:16:36.098"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>path</arg>
+<doc>Imports a resource file with the given path.</doc>
+<msg timestamp="20230126 19:16:49.186" level="FAIL">Resource file 'path' does not exist.</msg>
+<status status="FAIL" starttime="20230126 19:16:49.185" endtime="20230126 19:16:49.187"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:17:07.976" endtime="20230126 19:17:07.976"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:17:07.981" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20230126 19:17:07.977" endtime="20230126 19:17:07.982"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:17:07.975" endtime="20230126 19:17:07.983"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:17:07.975" endtime="20230126 19:17:07.984"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Open Browser</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230126 19:17:21.768" level="FAIL">TypeError: can only concatenate str (not "bytes") to str</msg>
+<status status="FAIL" starttime="20230126 19:17:21.767" endtime="20230126 19:17:21.769"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:17:21.766" endtime="20230126 19:17:21.770"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Keyword</arg>
+<arg>@args</arg>
+<arg>AND</arg>
+<arg>Keyword</arg>
+<arg>@args</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Keyword">
+<arg>@args</arg>
+<msg timestamp="20230126 19:17:47.844" level="FAIL">No keyword with name 'Keyword' found. Did you mean:
+    BuiltIn.Run Keyword
+    BuiltIn.Run Keywords
+    BuiltIn.Run Keyword If</msg>
+<status status="FAIL" starttime="20230126 19:17:47.844" endtime="20230126 19:17:47.844"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:17:47.839" endtime="20230126 19:17:47.844"/>
+</kw>
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230126 19:18:00.424" level="FAIL">TypeError: can only concatenate str (not "bytes") to str</msg>
+<status status="FAIL" starttime="20230126 19:18:00.423" endtime="20230126 19:18:00.424"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<status status="PASS" starttime="20230126 19:18:17.436" endtime="20230126 19:18:19.799"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="RPA.Browser.Selenium">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230126 19:18:47.631" level="FAIL">TypeError: can only concatenate str (not "bytes") to str</msg>
+<status status="FAIL" starttime="20230126 19:18:47.155" endtime="20230126 19:18:47.631"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:18:47.154" endtime="20230126 19:18:47.631"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open new Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open new Browser">
+<msg timestamp="20230126 19:19:41.887" level="FAIL">No keyword with name 'Open new Browser' found. Did you mean:
+    RPA.Browser.Selenium.Open Browser</msg>
+<status status="FAIL" starttime="20230126 19:19:41.887" endtime="20230126 19:19:41.888"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:19:41.882" endtime="20230126 19:19:41.888"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open new Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open new Browser">
+<msg timestamp="20230126 19:20:05.790" level="FAIL">No keyword with name 'Open new Browser' found. Did you mean:
+    RPA.Browser.Selenium.Open Browser</msg>
+<status status="FAIL" starttime="20230126 19:20:05.790" endtime="20230126 19:20:05.790"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:20:05.784" endtime="20230126 19:20:05.790"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>tasks.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<msg timestamp="20230126 19:21:37.887" level="FAIL">Error in file '/Users/jan/Desktop/RPA/Robocorp/certificationLevel2-Lemon-Robot/tasks.robot' on line 11: Resource file with 'Tasks' section is invalid.</msg>
+<status status="FAIL" starttime="20230126 19:21:37.885" endtime="20230126 19:21:37.888"/>
+</kw>
+<kw name="Import Resource" library="BuiltIn">
+<arg>keywords.robot</arg>
+<doc>Imports a resource file with the given path.</doc>
+<msg timestamp="20230126 19:22:54.488" level="FAIL">Resource file 'keywords.robot' does not exist.</msg>
+<status status="FAIL" starttime="20230126 19:22:54.486" endtime="20230126 19:22:54.489"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open New Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open New Browser">
+<kw name="Log" library="BuiltIn">
+<arg>Openning available browser</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:24:05.095" endtime="20230126 19:24:05.095"/>
+</kw>
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>https://robotsparebinindustries.com/#/robot-order</arg>
+<arg>maximized=True</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<status status="PASS" starttime="20230126 19:24:05.095" endtime="20230126 19:24:08.031"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Check, if browser was opened properly</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:24:08.032" endtime="20230126 19:24:08.033"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="RPA.Browser.Selenium">
+<arg>css:button.btn.btn-dark</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230126 19:24:08.033" endtime="20230126 19:24:08.061"/>
+</kw>
+<status status="PASS" starttime="20230126 19:24:05.094" endtime="20230126 19:24:08.062"/>
+</kw>
+<status status="PASS" starttime="20230126 19:24:05.092" endtime="20230126 19:24:08.062"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:24:35.535" endtime="20230126 19:24:35.535"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:24:36.226" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:24:35.535" endtime="20230126 19:24:36.226"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:24:35.534" endtime="20230126 19:24:36.226"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:24:35.533" endtime="20230126 19:24:36.227"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:25:12.093" endtime="20230126 19:25:12.093"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:25:12.727" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:25:12.093" endtime="20230126 19:25:12.728"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:25:12.091" endtime="20230126 19:25:12.729"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:25:12.091" endtime="20230126 19:25:12.729"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:25:48.810" endtime="20230126 19:25:48.810"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:25:49.434" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:25:48.811" endtime="20230126 19:25:49.434"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:25:48.809" endtime="20230126 19:25:49.435"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:25:48.808" endtime="20230126 19:25:49.436"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:26:01.587" endtime="20230126 19:26:01.588"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:26:02.236" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:26:01.588" endtime="20230126 19:26:02.236"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:26:01.587" endtime="20230126 19:26:02.236"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:26:01.586" endtime="20230126 19:26:02.237"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:26:25.439" endtime="20230126 19:26:25.439"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:26:26.064" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:26:25.439" endtime="20230126 19:26:26.065"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:26:25.438" endtime="20230126 19:26:26.065"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:26:25.437" endtime="20230126 19:26:26.066"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:26:55.806" endtime="20230126 19:26:55.806"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:26:56.459" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:26:55.806" endtime="20230126 19:26:56.459"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:26:55.805" endtime="20230126 19:26:56.460"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:26:55.804" endtime="20230126 19:26:56.460"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:27:06.765" endtime="20230126 19:27:06.766"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:27:07.396" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:27:06.766" endtime="20230126 19:27:07.396"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:27:06.764" endtime="20230126 19:27:07.397"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:27:06.763" endtime="20230126 19:27:07.397"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:29:22.405" endtime="20230126 19:29:22.406"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>button:ok</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:29:23.042" level="FAIL">Button with locator 'button:ok' not found.</msg>
+<status status="FAIL" starttime="20230126 19:29:22.406" endtime="20230126 19:29:23.042"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:29:22.405" endtime="20230126 19:29:23.043"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:29:22.404" endtime="20230126 19:29:23.043"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:29:44.193" endtime="20230126 19:29:44.194"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>css:.button.btn.btn-dark</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:29:44.812" level="FAIL">Button with locator 'css:.button.btn.btn-dark' not found.</msg>
+<status status="FAIL" starttime="20230126 19:29:44.194" endtime="20230126 19:29:44.812"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:29:44.193" endtime="20230126 19:29:44.813"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:29:44.192" endtime="20230126 19:29:44.813"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:30:06.016" endtime="20230126 19:30:06.016"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>css:.btn.btn-dark</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" starttime="20230126 19:30:06.016" endtime="20230126 19:30:06.095"/>
+</kw>
+<status status="PASS" starttime="20230126 19:30:06.015" endtime="20230126 19:30:06.096"/>
+</kw>
+<status status="PASS" starttime="20230126 19:30:06.015" endtime="20230126 19:30:06.096"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:30:29.703" endtime="20230126 19:30:29.704"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>css:.btn.btn-dark</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230126 19:30:30.361" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=109.0.5414.119)
+Stacktrace:
+0   chromedriver                        0x0000000100cccfa8 chromedriver + 4886440
+1   chromedriver                        0x0000000100c4a643 chromedriver + 4351555
+2   chromedriver                        0x000000010089899d chromedriver + 477597
+3   chromedriver                        0x00000001008def51 chromedriver + 765777
+4   chromedriver                        0x00000001008cfd73 chromedriver + 703859
+5   chromedriver                        0x00000001009035d2 chromedriver + 914898
+6   chromedriver                        0x00000001008cf3dd chromedriver + 701405
+7   chromedriver                        0x000000010090378e chromedriver + 915342
+8   chromedriver                        0x000000010091e5fe chromedriver + 1025534
+9   chromedriver                        0x00000001009033a3 chromedriver + 914339
+10  chromedriver                        0x00000001008cd57f chromedriver + 693631
+11  chromedriver                        0x00000001008ceb1e chromedriver + 699166
+12  chromedriver                        0x0000000100c99b9e chromedriver + 4676510
+13  chromedriver                        0x0000000100c9e91e chromedriver + 4696350
+14  chromedriver                        0x0000000100ca619f chromedriver + 4727199
+15  chromedriver                        0x0000000100c9f81a chromedriver + 4700186
+16  chromedriver                        0x0000000100c72a62 chromedriver + 4516450
+17  chromedriver                        0x0000000100cbe8c8 chromedriver + 4827336
+18  chromedriver                        0x0000000100cbea45 chromedriver + 4827717
+19  chromedriver                        0x0000000100cd47ef chromedriver + 4917231
+20  libsystem_pthread.dylib             0x00007ff816a1d4e1 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff816a18f6b thread_start + 15
+</msg>
+<status status="FAIL" starttime="20230126 19:30:29.704" endtime="20230126 19:30:30.367"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:30:29.703" endtime="20230126 19:30:30.367"/>
+</kw>
+<status status="FAIL" starttime="20230126 19:30:29.702" endtime="20230126 19:30:30.368"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Pop Up Window Handling</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Pop Up Window Handling">
+<kw name="Log" library="BuiltIn">
+<arg>Clicking to OK in pop window</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 19:30:41.627" endtime="20230126 19:30:41.628"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>css:.btn.btn-dark</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" starttime="20230126 19:30:41.628" endtime="20230126 19:30:41.699"/>
+</kw>
+<status status="PASS" starttime="20230126 19:30:41.627" endtime="20230126 19:30:41.699"/>
+</kw>
+<status status="PASS" starttime="20230126 19:30:41.626" endtime="20230126 19:30:41.699"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Load CSV</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Load CSV">
+<kw name="Log" library="BuiltIn">
+<arg>Loading CSV into promt</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 20:20:13.313" endtime="20230126 20:20:13.314"/>
+</kw>
+<kw name="Read table from CSV">
+<var>${csvValues}</var>
+<arg>input/orders.csv</arg>
+<msg timestamp="20230126 20:20:13.321" level="FAIL">No keyword with name 'Read table from CSV' found.</msg>
+<status status="FAIL" starttime="20230126 20:20:13.321" endtime="20230126 20:20:13.321"/>
+</kw>
+<status status="FAIL" starttime="20230126 20:20:13.312" endtime="20230126 20:20:13.322"/>
+</kw>
+<status status="FAIL" starttime="20230126 20:20:13.312" endtime="20230126 20:20:13.322"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Load CSV</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Load CSV">
+<kw name="Log" library="BuiltIn">
+<arg>Loading CSV into promt</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 20:20:35.714" endtime="20230126 20:20:35.714"/>
+</kw>
+<kw name="Read table from CSV">
+<var>${csvValues}</var>
+<arg>input/orders.csv</arg>
+<msg timestamp="20230126 20:20:35.724" level="FAIL">No keyword with name 'Read table from CSV' found.</msg>
+<status status="FAIL" starttime="20230126 20:20:35.724" endtime="20230126 20:20:35.724"/>
+</kw>
+<status status="FAIL" starttime="20230126 20:20:35.712" endtime="20230126 20:20:35.724"/>
+</kw>
+<status status="FAIL" starttime="20230126 20:20:35.711" endtime="20230126 20:20:35.725"/>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<arg>Load CSV</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<kw name="Load CSV">
+<kw name="Log" library="BuiltIn">
+<arg>Loading CSV into promt</arg>
+<arg>level=Trace</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" starttime="20230126 20:21:20.766" endtime="20230126 20:21:20.766"/>
+</kw>
+<kw name="Read table from CSV">
+<arg>input/orders.csv</arg>
+<msg timestamp="20230126 20:21:20.774" level="FAIL">No keyword with name 'Read table from CSV' found.</msg>
+<status status="FAIL" starttime="20230126 20:21:20.773" endtime="20230126 20:21:20.774"/>
+</kw>
+<status status="FAIL" starttime="20230126 20:21:20.765" endtime="20230126 20:21:20.774"/>
+</kw>
+<status status="FAIL" starttime="20230126 20:21:20.763" endtime="20230126 20:21:20.775"/>
+</kw>
+<status status="PASS" starttime="20230126 19:11:57.450" endtime="20230126 21:05:17.071"/>
+</kw>
+<status status="PASS" starttime="20230126 19:11:57.449" endtime="20230126 21:05:17.075"/>
+</test>
+<status status="PASS" starttime="20230126 19:11:57.414" endtime="20230126 21:05:17.083"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
