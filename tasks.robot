@@ -6,22 +6,39 @@ Documentation       Orders robots from RobotSpareBin Industries Inc.
 ...                 Creates ZIP archive of the receipts and the images.
 
 Library             html_tables.py
-Library             RPA.Browser.Selenium    auto_close=${True}
+Library             RPA.Browser.Selenium    auto_close=${False}
 Library             RPA.Tables
+Library             RPA.Images
+Library             Collections
+Library             RPA.PDF
 
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
     Open New Browser
-    Pop Up Window Handling
-    ${html_table}=    Get HTML table
-    ${table}=    Read Table From Html    ${html_table}
-    ${dimensions}=    Get Table Dimensions    ${table}
-    ${first_row}=    Get Table Row    ${table}    ${0}
-    ${first_cell}=    RPA.Tables.Get Table Cell    ${table}    ${0}    ${0}
-    FOR    ${row}    IN    @{table}
-        Log To Console    ${row}
+    Get Orders
+    ${csvDatatable}=    Get Orders
+    FOR    ${row}    IN    @{csvDatatable}
+        Pop Up Window Handling
+        Select Head from Select    ${row}[Head]
+        Enter Leg Number    ${row}[Legs]
+        Enter Shipping Address    ${row}[Address]
+        Select Body    ${row}[Body]
+        Click to Preview
+        Sleep    1
+        Make screenshot
+        Submit The Order
+        Save the receipt    ${row}[Order number]
+        Order Another Robot
     END
+    # Select Head from Select    2
+    # Enter Leg Number    2
+    # Enter Shipping Address    Moravská
+    # Select Body    2
+    # Click to Preview
+    # Sleep    1
+    # Make screenshot
+
 
 *** Keywords ***
 Open New Browser
@@ -42,6 +59,59 @@ Get Orders
 Get HTML table
     Click Button    css:#root > div > div.container > div > div.col-sm-5 > div.form-group > button
     Sleep    1
-    ${html_table}=    Get Element Attribute    css:#model-info     outerHTML
+    ${html_table}=    Get Element Attribute    css:#model-info    outerHTML
     Log    Data in Table: ${html_table}
     RETURN    ${html_table}
+
+Read HTML table as Table
+    Log    Reading HTML table and parsing data    level=Trace
+    ${html_table}=    Get HTML table
+    Log    Table: ${html_table}    level=Trace
+    ${table}=    Read Table From Html    ${html_table}
+    RETURN    @{table}
+
+Select Head from Select
+    [Arguments]    ${in_headNumber}
+    Log    Selecting Head from the list with in_headNumber: ${in_headNumber}    level=Trace
+    Select From List By Value    id:head    ${in_headNumber}
+
+Enter Leg Number
+    [Arguments]    ${in_legNumber}
+    Log    Entering Leg Number: ${in_legNumber}    level=Trace
+    Input Text    css:input[placeholder="Enter the part number for the legs"]    ${in_legNumber}
+
+Select Body
+    [Arguments]    ${in_bodyNumber}
+    Log    Selecting Body with the radio Button: ${in_bodyNumber}    level=Trace
+    Select Radio Button    body    id-body-${in_bodyNumber}
+
+Enter Shipping Address
+    [Arguments]    ${in_shippingAddress}
+    Log    Entering Shipping address: ${in_shippingAddress}    level=Trace
+    Input Text    css:input[id="address"]    ${in_shippingAddress}
+
+Click to Preview
+    Log    Clicking to preview    level=Trace
+    Click Button    id:preview
+
+Make screenshot
+    Log    Taking screenshot of the robot preview    level=Trace
+    Scroll Element Into View    css:img[alt="Legs"]
+    Screenshot    css:div[id="robot-preview-image"]    output/robotpreview.png
+
+Submit The Order
+    Log    Submiting Order    level=Trace
+    Click Button    css:button[id="order"]
+    Log    Wait for element is visisble
+    Wait Until Element Is Visible    id:order-completion
+
+Order Another Robot
+    Log    Click to Order another Robot button    level=Trace
+    Click Button    css:button[id="order-another"]
+
+Save the receipt
+    [Arguments]    ${orderNumber}
+    Log    Saving receipt    level=Trace
+    ${htmlContent}=    Get Element Attribute    id:order-completion    outerHTML
+    Html To Pdf    ${htmlContent}    output/pdf/order${orderNumber}.pdf
+    # ${orderList}    Create List   
