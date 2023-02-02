@@ -44,7 +44,7 @@ Order robots from RobotSpareBin Industries Inc.
         Order Another Robot
     END
     ${zipName}=    Input form dialog
-    Create a ZIP File    output/pdf    ${zipName}
+    Create a ZIP File    output    ${zipName}
 
 
 *** Keywords ***
@@ -137,7 +137,8 @@ Create a ZIP File
     Archive Folder With Zip    ${pdfFolderPath}    ${zipName}    overwrite=True
 
 Input form dialog
-    Add heading       Give me the name of the ZIP file
+    Add heading    Give me the name of the ZIP file
     Add text input    message    label=name
     ${zipName}=    Run dialog
+    Log    ${zipName.message}.zip    level=INFO
     RETURN    ${zipName.message}.zip
