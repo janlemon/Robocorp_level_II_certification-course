@@ -6,18 +6,24 @@ Documentation       Orders robots from RobotSpareBin Industries Inc.
 ...                 Creates ZIP archive of the receipts and the images.
 
 Library             html_tables.py
-Library             RPA.Browser.Selenium    auto_close=${False}
+Library             RPA.Browser.Selenium    auto_close=${True}
 Library             RPA.Tables
 Library             RPA.Images
 Library             Collections
 Library             RPA.PDF
+Library             XML
+Library             RPA.HTTP
+Library             RPA.Robocorp.Vault
+Library             OperatingSystem
+Library             RPA.FileSystem
+Library             RPA.Archive
 
 
 *** Tasks ***
 Order robots from RobotSpareBin Industries Inc
+    Download CSV Files    input/Download    orders.csv
     Open New Browser
-    Get Orders
-    ${csvDatatable}=    Get Orders
+    ${csvDatatable}=    Get Orders    input/Download    orders.csv
     FOR    ${row}    IN    @{csvDatatable}
         Pop Up Window Handling
         Select Head from Select    ${row}[Head]
@@ -28,19 +34,27 @@ Order robots from RobotSpareBin Industries Inc
         Sleep    1
         Make screenshot
         Submit The Order
+        ${alertExist}=    Is Element Visible    css:div[class="alert alert-danger"]
+        WHILE    ${alertExist}
+            Submit The Order
+            ${alertExist}=    Is Element Visible    css:div[class="alert alert-danger"]
+        END
         Save the receipt    ${row}[Order number]
         Order Another Robot
     END
-    # Select Head from Select    2
-    # Enter Leg Number    2
-    # Enter Shipping Address    Moravská
-    # Select Body    2
-    # Click to Preview
-    # Sleep    1
-    # Make screenshot
+    Create a ZIP File    output/pdf
 
 
 *** Keywords ***
+Download CSV Files
+    [Arguments]    ${targetFolder}    ${fileName}
+    Log    Download the csv file    level=Trace
+    ${secret}=    Get Secret    csvURL
+    Download    ${secret}[csvURL]    target_file=${targetFolder}    overwrite=True
+    Log    ${targetFolder}/${fileName}
+    Wait Until Created    ${targetFolder}/${fileName}    timeout=10
+    File Should Exist    ${targetFolder}/${fileName}
+
 Open New Browser
     Log    Openning available browser    level=Trace
     Open Available Browser    https://robotsparebinindustries.com/#/robot-order    maximized=True
@@ -52,8 +66,9 @@ Pop Up Window Handling
     Click Button    css:.btn.btn-dark
 
 Get Orders
+    [Arguments]    ${inputFolder}    ${fileName}
     Log    Loading CSV into promt    level=Trace
-    ${csvFile}=    Read table from CSV    input/orders.csv    header=True
+    ${csvFile}=    Read table from CSV    ${inputFolder}/${fileName}    header=True
     RETURN    ${csvFile}
 
 Get HTML table
@@ -102,8 +117,6 @@ Make screenshot
 Submit The Order
     Log    Submiting Order    level=Trace
     Click Button    css:button[id="order"]
-    Log    Wait for element is visisble
-    Wait Until Element Is Visible    id:order-completion
 
 Order Another Robot
     Log    Click to Order another Robot button    level=Trace
@@ -114,4 +127,9 @@ Save the receipt
     Log    Saving receipt    level=Trace
     ${htmlContent}=    Get Element Attribute    id:order-completion    outerHTML
     Html To Pdf    ${htmlContent}    output/pdf/order${orderNumber}.pdf
-    # ${orderList}    Create List   
+    ${listOfFiles}=    Create List    output/pdf/order${orderNumber}.pdf    output/robotpreview.png
+    Add Files To Pdf    ${listOfFiles}    output/pdf/order${orderNumber}.pdf
+
+Create a ZIP File
+    [Arguments]    ${pdfFolderPath}
+    Archive Folder With Zip    ${pdfFolderPath}    receipts.zip    overwrite=True
