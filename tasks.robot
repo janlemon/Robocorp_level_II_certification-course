@@ -17,10 +17,11 @@ Library             RPA.Robocorp.Vault
 Library             OperatingSystem
 Library             RPA.FileSystem
 Library             RPA.Archive
+Library             RPA.Dialogs
 
 
 *** Tasks ***
-Order robots from RobotSpareBin Industries Inc
+Order robots from RobotSpareBin Industries Inc.
     Download CSV Files    input/Download    orders.csv
     Open New Browser
     ${csvDatatable}=    Get Orders    input/Download    orders.csv
@@ -42,7 +43,8 @@ Order robots from RobotSpareBin Industries Inc
         Save the receipt    ${row}[Order number]
         Order Another Robot
     END
-    Create a ZIP File    output/pdf
+    ${zipName}=    Input form dialog
+    Create a ZIP File    output/pdf    ${zipName}
 
 
 *** Keywords ***
@@ -131,5 +133,11 @@ Save the receipt
     Add Files To Pdf    ${listOfFiles}    output/pdf/order${orderNumber}.pdf
 
 Create a ZIP File
-    [Arguments]    ${pdfFolderPath}
-    Archive Folder With Zip    ${pdfFolderPath}    receipts.zip    overwrite=True
+    [Arguments]    ${pdfFolderPath}    ${zipName}
+    Archive Folder With Zip    ${pdfFolderPath}    ${zipName}    overwrite=True
+
+Input form dialog
+    Add heading       Give me the name of the ZIP file
+    Add text input    message    label=name
+    ${zipName}=    Run dialog
+    RETURN    ${zipName.message}.zip
