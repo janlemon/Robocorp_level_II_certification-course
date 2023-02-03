@@ -44,7 +44,8 @@ Order robots from RobotSpareBin Industries Inc.
         Order Another Robot
     END
     ${zipName}=    Input form dialog
-    Create a ZIP File    output    ${zipName}
+    Create a ZIP File    output/pdf    output/${zipName}
+    File Should Exist    output/${zipName}
 
 
 *** Keywords ***
